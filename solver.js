@@ -97,18 +97,6 @@ function check_cage(loc) {
 			return true;
 		sum += v;
 	}
-	/*
-	if(squares.has(sum)) {
-		console.log(cage);
-		console.log(sum);
-		for(let l of cage) {
-			console.log(l);
-			console.log(sudoku[l[0]][l[1]]);
-		}
-	}
-	*/
-
-
 	return squares.has(sum);
 }
 
