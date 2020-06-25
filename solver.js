@@ -1,6 +1,6 @@
 "use strict";
 
-let boxes = [
+let cagees = [
 	new Set([[0, 0], [1, 0]]),
 	new Set([[2, 0], [3, 0]]),
 	new Set([[4, 0], [3, 1], [3, 2]]),
@@ -29,9 +29,9 @@ let boxes = [
 
 let locToBox = Object();
 
-for(let box of boxes)
-	for(let loc of box)
-		locToBox[loc] = box;
+for(let cage of cagees)
+	for(let loc of cage)
+		locToBox[loc] = cage;
 
 let sudoku = [];
 
@@ -66,14 +66,31 @@ function check_col(x) {
 	return true;
 }
 
-function check_box(loc) {
+function check_box(x, y) {
+	x -= x % 3;
+	y -= y % 3;
+
+	let seen = new Set();
+	for(let i = x; i <= x + 2; ++i)
+		for(let j = y; j <= y + 2; ++j) {
+			let v = sudoku[i][j];
+			if(v != 0) {
+				if(seen.has(v))
+					return false;
+				seen.add(v);
+			}
+		}
+	return true;
+}
+
+function check_cage(loc) {
 	return true;
 }
 
 function fill(x, y) {
 	for(let v = 1; v <= 9; ++v) {
 		sudoku[x][y] = v;
-		if(check_row(y) && check_col(x) && check_box([x, y])) {
+		if(check_row(y) && check_col(x) && check_box(x, y) && check_cage([x, y])) {
 			if(x == 8 && y == 8)
 				return true;
 			
