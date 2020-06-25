@@ -3,7 +3,7 @@
 let cages = [
 	[[0, 0], [1, 0]],
 	[[2, 0], [3, 0]],
-	[[4, 0], [3, 1], [3, 2]],
+	[[4, 0], [3, 1], [4, 1]],
 	[[5, 0], [6, 0], [5, 1]],
 	[[7, 0], [6, 1], [7, 1], [6, 2]],
 	[[8, 0], [8, 1], [8, 2]],
@@ -97,6 +97,18 @@ function check_cage(loc) {
 			return true;
 		sum += v;
 	}
+	/*
+	if(squares.has(sum)) {
+		console.log(cage);
+		console.log(sum);
+		for(let l of cage) {
+			console.log(l);
+			console.log(sudoku[l[0]][l[1]]);
+		}
+	}
+	*/
+
+
 	return squares.has(sum);
 }
 
