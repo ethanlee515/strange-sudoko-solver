@@ -27,7 +27,7 @@ let cages = [
 	[[6, 8], [7, 8], [8, 8]]
 ];
 
-let locToCage = Object();
+let locToCage = new Object();
 
 for(let cage of cages)
 	for(let loc of cage) {
