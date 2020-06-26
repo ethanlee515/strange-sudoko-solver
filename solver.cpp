@@ -141,8 +141,6 @@ struct solver {
 
 int main() {
 	solver s;
-	bool success = s.solve();
-	if(!success)
-		cout << "Failed to solve." << endl;
+	s.solve();
 	s.print();
 }
