@@ -8,4 +8,4 @@ Standard sudoku rules apply. Furthermore, numbers in every cage must add up to a
 
 ## Results
 
-The C++ version generated a solution in slightly less than 24 hours. The JavaScript version cannot produce a solution within a reasonable timeframe unless a significant proportion of cages are removed.
+The C++ version generated a solution in slightly less than 24 hours. The JavaScript version cannot produce a solution within a reasonable timeframe, unless a significant proportion of cages are removed.
