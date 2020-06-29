@@ -1,6 +1,6 @@
 # Sudoku Solver
 
-Gonna give [this](https://cracking-the-cryptic.web.app/sudoku/36r8R9FNnN) puzzle a try.
+Gonna give [this puzzle](https://cracking-the-cryptic.web.app/sudoku/36r8R9FNnN) a try.
 
 ## Rules
 
